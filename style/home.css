@@ -1,0 +1,240 @@
+.container {
+    margin: 100px auto;
+}
+
+.container .brand {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .tag-line {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.5em;
+}
+
+.container .description {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.container .intero-action {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .intero-action button {
+    font-size: 20px;
+    width: 200px;
+}
+
+.what-is {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.what-is h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.what-is p {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.what-makes-difference {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gray);
+    text-align: center;
+}
+
+.what-makes-difference h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.what-makes-difference .feature-container{
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.what-makes-difference .feature-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--gray);
+}
+
+.what-makes-difference .feature-card:hover {
+    border: none;
+    box-shadow: 0 3px 2px -1px rgba(0,0,0,.12),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12) ,-0 -1px 18px 0 rgba(0,0,0,.12)!important;
+}
+
+.what-makes-difference i {
+    font-size: 70px;
+    background: -webkit-linear-gradient(var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.what-makes-difference h4 {
+    font-size: 1.3em;
+    margin-top: 12px;
+    color: var(--text-light);
+}
+
+.security {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gray);
+    text-align: center;
+}
+
+.security > div {
+    background-color: var(--optional);
+    color: var(--white);
+    padding: 50px;
+    border-radius: 6px;
+}
+
+.security h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+.security p {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+}
+
+.vision {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gray);
+    text-align: center;
+}
+
+.vision h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.vision p {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.mission {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.mission p {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.subscribe {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gray);
+    text-align: center;
+}
+
+.subscribe h4 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.subscribe form {
+    margin-top: 3em;
+}
+
+.subscribe form input {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-dark);
+    margin-right: 20px;
+    width: 300px;
+}
+
+.subscribe form input::placeholder {
+    font-style: italic;
+    color: var(--text-lightest);
+}
+
+.subscribe form input:focus {
+    outline: 1px solid var(--secondary);
+}
+
+.footer {
+    background-color: var(--optional);
+    color: var(--white);
+}
+
+.footer .footer-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+}
+
+.footer .footer-content h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+
+.footer .footer-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-content .contact-us > .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .footer-content .contact-us i {
+    font-size: 1.8em;
+    padding: 10px;
+    min-width: 30%;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
