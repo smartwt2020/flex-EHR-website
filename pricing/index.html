@@ -9,9 +9,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/navbar.css">
-    <link rel="stylesheet" href="/style/product.css">
+    <link rel="stylesheet" href="/style/pricing.css">
     <script src="/script/sign-up-form.js"></script>
-    <title>EHR Product</title>
+    <title>EHR Pricing</title>
 </head>
 <body>
     <nav class="navbar">
@@ -37,59 +37,44 @@
         </ul>
     </nav>
     <main class="container">
-        <section class="features">
+        <section class="pricing">
             <h1>Flex EHR Feature</h1>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.centuries, but also the leap into electronic typesetting, remaining essentially unc leap into electronic typesetting, remaining essentially unc leap into electronic typesetting, remaining essentially u...
             </p>
         </section>
-        <article class="features-list">
-            <section class="feature">
-                <div class="feature-name">
-                    <h2>Feature - 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod delectus, sed cum debitis suscipit perspiciatis molestias ex, architecto similique a voluptatum! Tempore ex error possimus magnam quisquam esse nemo!</p>
+        <hr>
+        <form autocomplete="off" class="contact-us-form">
+            <h2>Connect with us for best Pricing</h2>
+            <div class="flex jc-between">
+                <div class="contact-us-input">
+                    <input type="text" value="" id="contact_us_hospital-name">
+                    <label for="contact_us_hospital-name" >Hospital Name</label>
                 </div>
-                <div class="feature-image">
-                    <img src="/assets/feature-1.png" alt="">
+                <div class="contact-us-input">
+                    <input type="text" value="" id="contact_us_contact">
+                    <label for="contact_us_contact" >Contact Name</label>
                 </div>
-            </section>
-            <section class="feature">
-                <div class="feature-name">
-                    <h2>Feature - 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod delectus, sed cum debitis suscipit perspiciatis molestias ex, architecto similique a voluptatum! Tempore ex error possimus magnam quisquam esse nemo!</p>
+            </div>
+            <div class="flex jc-between">
+                <div class="contact-us-input">
+                    <input type="text" value="" id="contact_us_contact_name">
+                    <label for="contact_us_contact_name" >Contact Number</label>
                 </div>
-                <div class="feature-image">
-                    <img src="/assets/feature-1.png" alt="">
+                <div class="contact-us-input">
+                    <input type="text" value="" id="contact_us_email">
+                    <label for="contact_us_email" >Email Id</label>
                 </div>
-            </section>
-            <section class="feature">
-                <div class="feature-name">
-                    <h2>Feature - 1</h2>
-                    <p>Lorem Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quis pariatur officia soluta inventore natus numquam, itaque, provident adipisci cumque aliquid doloremque commodi alias voluptatem iure harum saepe quia possimus? ipsum dolor sit amet, consectetur adipisicing elit. Quaerat consequatur minima accusamus rem quas earum numquam, rerum totam sed reprehenderit perferendis distinctio tenetur dolorum doloremque repudiandae, et possimus sunt! Cumque. ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod delectus, sed cum debitis suscipit perspiciatis molestias ex, architecto similique a voluptatum! Tempore ex error possimus magnam quisquam esse nemo!</p>
-                </div>
-                <div class="feature-image">
-                    <img src="/assets/feature-1.png" alt="">
-                </div>
-            </section>
-            <section class="feature">
-                <div class="feature-name">
-                    <h2>Feature - 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod delectus, sed cum debitis suscipit perspiciatis molestias ex, architecto similique a voluptatum! Tempore ex error possimus magnam quisquam esse nemo!</p>
-                </div>
-                <div class="feature-image">
-                    <img src="/assets/feature-1.png" alt="">
-                </div>
-            </section>
-            <section class="feature">
-                <div class="feature-name">
-                    <h2>Feature - 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quod delectus, sed cum debitis suscipit perspiciatis molestias ex, architecto similique a voluptatum! Tempore ex error possimus magnam quisquam esse nemo!</p>
-                </div>
-                <div class="feature-image">
-                    <img src="/assets/feature-1.png" alt="">
-                </div>
-            </section>
-        </article>
+            </div>
+            <div class="contact-us-input">
+                <textarea type="text" value="" rows="5" id="contact_us_comment"></textarea>
+                <label for="contact_us_comment" >Additional Comments</label>
+            </div>
+            <div class="contact-us-action flex jc-end px-5">
+                <button class="btn red tx-l mx-4" id="contact_cancel">Clear</button>
+                <button class="btn green tx-l" id="contact_register">Submit</button>
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <div class="footer-content">
@@ -126,6 +111,8 @@
             Copyright to FlexEHR.com | DragLoopEdge Private Limited 2021
         </div>
     </footer>
+
+
     <script>
         const signup = new SignUpForm()
         document.querySelectorAll('.signup-btn').forEach(btn => {
@@ -133,6 +120,17 @@
                 signup.open()
             })
         })
+        document.querySelector('.contact-us-form')
+            .querySelectorAll('input,textarea').forEach(input => {
+                input.addEventListener('blur', () => {
+                    const eleClass = input.getAttribute('class') || ''
+                    if(input.value !== '') {
+                        input.setAttribute('class', eleClass + ' ' + 'filled')
+                    } else {
+                        input.setAttribute('class', eleClass.replace(' filled', ''))
+                    }
+                })
+            })
     </script>
 </body>
 </html>
