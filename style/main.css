@@ -34,6 +34,10 @@ html, body {
     outline: none;
 }
 
+input:-internal-autofill-selected {
+    background-color: var(--white) !important;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;

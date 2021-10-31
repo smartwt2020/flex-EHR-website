@@ -1,0 +1,93 @@
+.pricing {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.pricing h1 {
+    font-size: 3em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.pricing p {
+    margin: 20px auto;
+    max-width: 1000px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+hr {
+    color: var(--gray);
+    margin: 50px 0;
+}
+
+.contact-us-form {
+    margin-bottom: 50px;
+}
+
+.contact-us-form h2 {
+    text-align: center;
+    color: var(--secondary);
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.contact-us-form .contact-us-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.contact-us-form .contact-us-input input,textarea,select {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: var(--text-light);
+    border: 1px solid var(--gray-dark);
+    margin-right: 20px;
+    width: 100%;
+}
+.contact-us-form .contact-us-input input[type="checkbox"] {
+    border-radius: 8px;
+    border: 1px solid var(--gray-dark);
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+.contact-us-form .contact-us-input input[type="checkbox"]:focus {
+    outline: none;
+}
+
+.contact-us-form .contact-us-input input:focus,textarea:focus {
+    outline: 1px solid var(--secondary);
+}
+.contact-us-form .contact-us-input  label {
+    position: absolute;
+    background: var(--white);
+    padding: 0px 8px;
+    transition: top 0.6s;
+    left: 40px;
+    color: var(--text-lightest);
+    top: 30px;
+}
+.contact-us-form .contact-us-input input:focus + label,
+.contact-us-form .contact-us-input input.filled + label {
+    color: var(--primary);
+    font-style: normal;
+    top: 10px;
+}
+
+.contact-us-form .contact-us-input textarea:focus + label,
+.contact-us-form .contact-us-input textarea.filled + label {
+    color: var(--primary);
+    font-style: normal;
+    top: 10px;
+}
+
+.contact-us-form .contact-us-action button{
+    width: 200px
+}
