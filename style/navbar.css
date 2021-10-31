@@ -35,3 +35,45 @@ nav ul li a:hover {
 nav ul li a.active {
     color: var(--secondary);
 }
+
+
+.footer {
+    background-color: var(--optional);
+    color: var(--white);
+}
+
+.footer .footer-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+}
+
+.footer .footer-content h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+
+.footer .footer-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-content .contact-us > .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .footer-content .contact-us i {
+    font-size: 1.8em;
+    padding: 10px;
+    min-width: 30%;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
