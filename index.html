@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
         integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/home.css">
@@ -40,7 +44,7 @@
     </nav>
     <main class="container">
         <section class="introduction">
-            <h1 class="brand">Flex E H R</h1>
+            <h1 class="brand" data-animation="animate__pulse">Flex E H R</h1>
             <p class="tag-line">Reimaging Healthcare</p>
             <p class="description">
                 <span>Simple.</span>
@@ -52,57 +56,55 @@
                 <button class="btn primary signup-btn">Signup</button>
             </div>
         </section>
-        <article class="what-is">
+        <article class="what-is" data-animation="animate__fadeIn">
             <h2>What is Flex - EHR</h2>
             <p>
                 Flex-EHR offers simple, stable yet effective solution to healthcare professionals. Built on cutting edge technology, we are offering new age solution to both doctors and patients.
                 With the aim of becoming one stop solution to all of healthcare needs, we stand shoulder to shoulder with health care industry in proving the best solution possible.
-
-
             </p>
         </article>
          <section class="what-makes-difference">
             <h2>What Flex-EHR makes difference</h2>
             <div class="feature-container">
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-check"></i>
                     <h4>HIPAA Compalints</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fab fa-studiovinari"></i>
                     <h4>ICD-10 Integrated</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-shield-alt"></i>
                     <h4>Patient Application</h4>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-users"></i>
                     <h4>Community Engagement</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-brain"></i>
                     <h4>Integrated Intelligence</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fab fa-creative-commons-sampling-plus"></i>
                     <h4>Third party Integration</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-network-wired"></i>
                     <h4>Hybrid Technology</h4>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-animation="animate__flipInX" >
                     <i class="fas fa-headset"></i>
                     <h4>24/7 Online Support</h4>
                 </div>
             </div>
         </section>
-        <article class="security">
+        <article class="security" >
             <div>
-                <h2>Build With Security in Mind</h2>
-                <p>
+                <h2 data-animation="animate__fadeIn">Build With Security in Mind</h2>
+                <p data-animation="animate__fadeIn">
                    Flex EHR is Developed by industry and technology experts by keeping current issues in mind.
                    Flex EHR will be hosted in a highly secured environment will encrypt all your hospital data. Powered by AWS, the Flex EHR platform will always thrive to provide the best services without compromising data privacy.
                 </p>
@@ -126,8 +128,8 @@
                 blanditiis cupiditate beatae est excepturi sapiente suscipit.
             </p>
         </article>-->
-        <section class="subscribe">
-            <h4>Sounds Interesting Right..!</h4>
+        <section class="subscribe" >
+            <h4 data-animation="animate__shakeX">Sounds Interesting Right..!</h4>
             <form>
                 <input type="email" required name="" id="" placeholder="username@email.com">
                 <button type="submit" class="btn primary tx-l">Subscribe</button>
@@ -177,6 +179,7 @@
             })
         })
     </script>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>
