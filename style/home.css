@@ -1,10 +1,43 @@
 .container {
-    margin: 100px auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.container .brand {
+.hero-section {
+    position: relative;
+    height: calc(100vh - 60px);
+    display: flex;
+}
+
+.hero-section .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://img.hcinnovationgroup.com/files/base/ebm/hci/image/2021/06/bigstock_Ehr_Electronic_Health_Record_E_304383664.60b6968b95b09.png?auto=format&w=1000&h=562&fit=clip);
+}
+
+.hero-section img{
+    width: 100%;
+    max-height: 100%;
+}
+
+.hero-section .hero-left, .hero-right{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .hero-title {
+    margin-top: 0px;
     text-align: center;
-    font-size: 5em;
+    font-size: 6em;
     font-weight: bold;
     background: -webkit-linear-gradient(var(--primary), var(--secondary));
     background-clip: text;
@@ -12,159 +45,141 @@
     -webkit-text-fill-color: transparent;
 }
 
-.container .tag-line {
+.hero-section .hero-tagline {
     text-align: center;
     color: var(--secondary);
     font-size: 1.5em;
 }
 
-.container .description {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
+.hero-section .hero-feature {
+    height: 80px;
+}
+
+.hero-section .hero-feature span {
+    font-size: 48px;
+    margin-top: 30px;
     color: var(--secondary);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3em;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--gray);
+    border-right: 4px solid var(--gray);
+    padding-right: 2px;
+    line-height: 1;
+    border-radius: 4px;
+    animation: blink 1s forwards infinite;
 }
 
-.container .intero-action {
-    margin-top: 3em;
-    display: flex;
-    justify-content: space-evenly;
+@keyframes blink {
+    0% {
+        border-color: rgba(10, 10, 10, 1);
+    }
+    50% {
+        border-color: rgba(10, 10, 10, 0);
+    }
+    100% {
+        border-color: rgba(10, 10, 10, 1);
+    }
 }
 
-.container .intero-action button {
+.hero-section .hero-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.hero-section .hero-action button {
     font-size: 20px;
     width: 200px;
+    margin-right: 20px;
 }
 
-.what-is {
-    margin-top: 5em;
+.about-section {
+    position: sticky;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin: 0px auto;
+    margin-top: -90px;
+    padding: 16px;
     text-align: center;
+    z-index: 4;
+    box-shadow: 0px 0px 5px #808080db;
 }
-
-.what-is h2 {
+.about-section h2 {
     font-size: 2em;
-    font-weight: bold;
     color: var(--secondary);
 }
-.what-is p {
-    margin: 20px auto;
-    max-width: 800px;
-    font-size: 1.1rem;
+.about-section p {
+    font-weight: normal;
+    font-size: 18px;
     color: var(--text-light);
 }
 
-.what-makes-difference {
-    margin-top: 50px;
-    padding-top: 50px;
-    border-top: 1px solid var(--gray);
+.feature {
+    max-width: 1200px;
+    margin: 6em auto;
+    display: block !important;
     text-align: center;
 }
 
-.what-makes-difference h2 {
+.feature h2 {
     font-size: 2em;
-    font-weight: bold;
     color: var(--secondary);
 }
 
-.what-makes-difference .feature-container{
+.feature-container{
     width: 100%;
     margin-top: 60px;
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    align-items: initial;
 }
 
-.what-makes-difference .feature-card {
+.feature-container .feature-card {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--gray);
+    height: 200px;
 }
 
-.what-makes-difference .feature-card:hover {
+.feature-card .feature-card:hover {
     border: none;
     box-shadow: 0 3px 2px -1px rgba(0,0,0,.12),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12) ,-0 -1px 18px 0 rgba(0,0,0,.12)!important;
 }
 
-.what-makes-difference i {
+.feature-card i {
     font-size: 70px;
     background: -webkit-linear-gradient(var(--primary), var(--secondary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.what-makes-difference h4 {
+.feature-card h4 {
     font-size: 1.3em;
     margin-top: 12px;
     color: var(--text-light);
 }
 
-.security {
-    margin-top: 50px;
-    padding-top: 50px;
-    border-top: 1px solid var(--gray);
-    text-align: center;
-}
+.security-container {
+    background: #009bff;
+    margin: 3em auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    padding: 16px;
+} 
 
-.security > div {
-    background-color: var(--optional);
-    color: var(--white);
-    padding: 50px;
-    border-radius: 6px;
-}
-
-.security h2 {
+.security-section h2 {
     font-size: 2em;
-    font-weight: bold;
+    color: #fff;
 }
-.security p {
-    margin: 20px auto;
-    max-width: 800px;
-    font-size: 1.1rem;
-}
-
-.vision {
-    margin-top: 50px;
-    padding-top: 50px;
-    border-top: 1px solid var(--gray);
-    text-align: center;
-}
-
-.vision h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: var(--secondary);
-}
-.vision p {
-    margin: 20px auto;
-    max-width: 800px;
-    font-size: 1.1rem;
-    color: var(--text-light);
-}
-
-.mission {
-    margin-top: 5em;
-    text-align: center;
-}
-
-.mission h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: var(--secondary);
-}
-.mission p {
-    margin: 20px auto;
-    max-width: 800px;
-    font-size: 1.1rem;
-    color: var(--text-light);
+.security-section p {
+    font-weight: normal;
+    font-size: 18px;
+    color: #fff;
 }
 
 .subscribe {
-    margin-top: 50px;
+    max-width: 1200px;
+    margin: 3em auto;
     padding-top: 50px;
     border-top: 1px solid var(--gray);
     text-align: center;

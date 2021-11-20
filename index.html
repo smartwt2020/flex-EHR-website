@@ -43,27 +43,34 @@
         </ul>
     </nav>
     <main class="container">
-        <section class="introduction">
-            <h1 class="brand" data-animation="animate__pulse">Flex E H R</h1>
-            <p class="tag-line">Reimaging Healthcare</p>
-            <p class="description">
-                <span>Simple.</span>
-                <span>Stable.</span>
-                <span>Secure.</span>
-            </p>
-            <div class="intero-action">
-                <button class="btn gray-dark">See How It works</button>
-                <button class="btn primary signup-btn">Signup</button>
+        <section class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-left flex ai-center jc-center">
+                <div>
+                <h1 class="hero-title">
+                    Flex EHR
+                </h1>
+                <p class="hero-tagline">Reimaging Healthcare</p>
+                <div class="flex jc-center hero-feature">
+                    <span></span>
+                </div>
+                <div class="hero-action">
+                    <button class="btn gray-dark">See How It works</button>
+                    <button class="btn primary signup-btn">Signup</button>
+                </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="./assets/Simple1.svg" alt="">
+                <img src="./assets/Stable.svg" alt="">
+                <img src="./assets/Secure.svg" alt="">
             </div>
         </section>
-        <article class="what-is" data-animation="animate__fadeIn">
+        <article class="about-section" data-animation="animate__pulse">
             <h2>What is Flex - EHR</h2>
-            <p>
-                Flex-EHR offers simple, stable yet effective solution to healthcare professionals. Built on cutting edge technology, we are offering new age solution to both doctors and patients.
-                With the aim of becoming one stop solution to all of healthcare needs, we stand shoulder to shoulder with health care industry in proving the best solution possible.
-            </p>
+            <p>Flex-EHR offers simple, stable yet effective solution to healthcare professionals. Built on cutting edge technology, we are offering new age solution to both doctors and patients. With the aim of becoming one stop solution to all of healthcare needs, we stand shoulder to shoulder with health care industry in proving the best solution possible.</p>
         </article>
-         <section class="what-makes-difference">
+        <section class="feature">
             <h2>What Flex-EHR makes difference</h2>
             <div class="feature-container">
                 <div class="feature-card" data-animation="animate__flipInX">
@@ -78,7 +85,6 @@
                     <i class="fas fa-shield-alt"></i>
                     <h4>Patient Application</h4>
                 </div>
-
                 <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-users"></i>
                     <h4>Community Engagement</h4>
@@ -95,39 +101,21 @@
                     <i class="fas fa-network-wired"></i>
                     <h4>Hybrid Technology</h4>
                 </div>
-                <div class="feature-card" data-animation="animate__flipInX" >
+                <div class="feature-card" data-animation="animate__flipInX">
                     <i class="fas fa-headset"></i>
                     <h4>24/7 Online Support</h4>
                 </div>
             </div>
         </section>
-        <article class="security" >
-            <div>
-                <h2 data-animation="animate__fadeIn">Build With Security in Mind</h2>
-                <p data-animation="animate__fadeIn">
-                   Flex EHR is Developed by industry and technology experts by keeping current issues in mind.
-                   Flex EHR will be hosted in a highly secured environment will encrypt all your hospital data. Powered by AWS, the Flex EHR platform will always thrive to provide the best services without compromising data privacy.
-                </p>
+        <section class="security">
+            <div class="security-container flex ai-center">
+                <img src="./assets//security.gif" width="300px" alt="">
+                <article class="security-section" data-animation="animate__flipInX">
+                    <h2>Build With Security in Mind</h2>
+                    <p>Flex EHR is Developed by industry and technology experts by keeping current issues in mind. Flex EHR will be hosted in a highly secured environment will encrypt all your hospital data. Powered by AWS, the Flex EHR platform will always thrive to provide the best services without compromising data privacy.</p>
+                </article>
             </div>
-        </article>
-        <!--<article class="vision">
-            <h2>Vision</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur sapiente architecto repellat quo, atque earum
-                et vitae natus autem dolorem? Magnam repellat ducimus
-                blanditiis cupiditate beatae est excepturi sapiente suscipit.
-            </p>
-        </article>
-        <article class="mission">
-            <h2>Mission</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur sapiente architecto repellat quo, atque earum
-                et vitae natus autem dolorem? Magnam repellat ducimus
-                blanditiis cupiditate beatae est excepturi sapiente suscipit.
-            </p>
-        </article>-->
+        </section>
         <section class="subscribe" >
             <h4 data-animation="animate__shakeX">Sounds Interesting Right..!</h4>
             <form>
@@ -180,6 +168,7 @@
         })
     </script>
     <script src="./script/index.js"></script>
+    <script src="./script/scroll-animation.js"></script>
 </body>
 
 </html>

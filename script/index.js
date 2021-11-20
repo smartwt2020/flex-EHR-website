@@ -1,58 +1,59 @@
-(function () {
-    let scrollDirection = 1
-    let oldValue = 0;
 
-    window.addEventListener('scroll', function (e) {
+const typeText = [
+    ['S', 'i', 'm', 'p', 'l', 'e', '.', '.', '.'],
+    ['S', 't', 'a', 'b', 'l', 'e', '.', '.', '.'],
+    ['S', 'e', 'c', 'u', 'r', 'e', '.', '.', '.']
+]
+let currentIndex = 0
+let currentString = 0
+let domString = ''
+let deleteInterval = null
+let typingInterval = null
 
-        // Get the new Value
-        newValue = window.pageYOffset;
+const typeSelector = document.querySelector('.hero-feature span')
+const imgSelector = document.querySelectorAll('.hero-right img')
 
-        //Subtract the two and conclude
-        if (oldValue - newValue < 0) {
-            scrollDirection = 1
-        } else if (oldValue - newValue > 0) {
-            scrollDirection = 0
+const deleteType = () => {
+    deleteInterval = setInterval(() => {
+        domString = domString.slice(0,-1)
+        typeSelector.innerHTML = domString ? domString : ' '
+        if (domString.length === 0) {
+            clearInterval(deleteInterval)
+            startTyping()
+            imgSelector.forEach(e => {
+                e.style.display = 'none'
+            })
+            imgSelector[currentString].style.display = 'block'
         }
+    }, 100)
+}
 
-        // Update the old value
-        oldValue = newValue;
-    });
-
-    function appendClass(el, value) {
-        let classList = el.getAttribute('class')
-        classList += ' ' + value
-        el.setAttribute('class', classList)
+const pauseType = () => {
+    clearInterval(typingInterval)
+    currentString++
+    currentIndex = 0
+    if (currentString === typeText.length) {
+        currentString = 0
     }
+    setTimeout(() => {
+        deleteType()
+    }, 800)
+}
 
-    function removeClass(el, value) {
-        let classList = el.getAttribute('class') || ''
-        classList = classList.replace(value, '').trim()
-        el.setAttribute('class', classList)
-    }
+const startTyping = () => {
+    typing = true
+    typingInterval = setInterval(() => {
+        domString += typeText[currentString][currentIndex]
+        typeSelector.innerHTML = domString
+        currentIndex++
+        if (currentIndex >= typeText[currentString].length) {
+            pauseType()
+        }
+    }, 150)
+}
 
-    let observer = new IntersectionObserver((entries) => {
-        entries.forEach(entrie => {
-            if (scrollDirection) {
-                console.log(entrie)
-                const animationClass = 'animate__animated ' + entrie.target.getAttribute('data-animation')
-                const className = entrie.target.getAttribute('class') || ''
-                if (!className.includes('animate__animated')) {
-                    if (entrie.isIntersecting) {
-                        appendClass(entrie.target, animationClass)
-                        setTimeout(() => {
-                            removeClass(entrie.target, animationClass)
-                        }, 2000)
-                    } else {
-                        removeClass(entrie.target, animationClass)
-                    }
-                }
-            }
-
-        })
-    }, { threshold: 1, rootMargin: '-50px' })
-
-
-    document.querySelectorAll('[data-animation]').forEach(ele => {
-        observer.observe(ele)
-    })
-})()
+imgSelector.forEach(e => {
+    e.style.display = 'none'
+})
+imgSelector[currentString].style.display = 'block'
+startTyping()
