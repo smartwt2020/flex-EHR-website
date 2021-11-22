@@ -11,7 +11,7 @@ let deleteInterval = null
 let typingInterval = null
 
 const typeSelector = document.querySelector('.hero-feature span')
-const imgSelector = document.querySelectorAll('.hero-right img')
+const imgSelector = document.querySelectorAll('.img-container div')
 
 const deleteType = () => {
     deleteInterval = setInterval(() => {
@@ -60,5 +60,6 @@ const startTyping = () => {
 
 imgSelector.forEach((e, index) => {
     e.style.left = (-1 * index * 100) + '%'
+    e.style.position = "absolute"
 })
 startTyping()
