@@ -21,9 +21,15 @@ const deleteType = () => {
             clearInterval(deleteInterval)
             startTyping()
             imgSelector.forEach(e => {
-                e.style.display = 'none'
+                const left = parseInt(e.style.left)
+                if (left === 100) {
+                    e.style.transition = 'none'
+                    e.style.left = '-100%'
+                } else {
+                    e.style.transition = 'left 1s'
+                    e.style.left = left + 100 + '%'
+                }
             })
-            imgSelector[currentString].style.display = 'block'
         }
     }, 100)
 }
@@ -52,8 +58,7 @@ const startTyping = () => {
     }, 150)
 }
 
-imgSelector.forEach(e => {
-    e.style.display = 'none'
+imgSelector.forEach((e, index) => {
+    e.style.left = (-1 * index * 100) + '%'
 })
-imgSelector[currentString].style.display = 'block'
 startTyping()
